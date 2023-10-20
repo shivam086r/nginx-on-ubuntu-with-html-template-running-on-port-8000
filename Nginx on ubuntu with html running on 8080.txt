@@ -1,0 +1,41 @@
+sudo apt update
+
+sudo apt install nginx
+
+sudo systemctl start nginx
+
+sudo systemctl enable nginx
+
+sudo vim /var/www/html/index.html
+
+###### adding html script #######
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Nginx Page</title>
+</head>
+<body>
+    <h1>Hello, Nginx!</h1>
+    <p>This is a simple HTML page served by Nginx on port 8080.</p>
+</body>
+</html>
+
+######################################
+
+sudo vim /etc/nginx/sites-available/default
+
+------> changing port 8080 on nginx configuration file
+
+### For testing nginx configuration ######
+sudo nginx -t
+
+sudo systemctl reload nginx
+
+IpAddress:8080 
+
+##### for IpAdress (ifconfig or ip address and check inet section ) #######
+
+
+
+
